@@ -1,0 +1,9 @@
+.cache/
+.config/
+.docker/
+.ipython/
+.jupyter/
+.local/
+tutorials/
+src/
+.viminfo
