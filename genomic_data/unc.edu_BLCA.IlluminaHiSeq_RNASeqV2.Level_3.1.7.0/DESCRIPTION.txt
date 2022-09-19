@@ -1,0 +1,138 @@
+#########################
+
+V1_BWAtoTranscriptome, V1_RNASeqQuantification: UNC V1 RNA-Seq Workflow - BWA Alignment to Transcriptome
+
+Date: 20101108
+
+Authors:
+
+* Sara Grimm <sacheek@med.unc.edu>
+* Brian O'Connor <brianoc@email.unc.edu>
+
+Versions:
+
+This analysis was carried out using the SeqWare Pipeline project, version
+0.7.0. The workflow was "RNASeqAlignmentBWA" version 0.7.x. UNC
+provides all our analysis software through this open source project. Users can
+download this software to run the identical RNA-Seq analysis described in the
+steps below. See the project website at http://seqware.sf.net for more
+information. The UNCIDs provided in file names are identifiers unique to UNC
+and can be used to provide data/analysis provenance tracking.
+
+Annotations:
+
+The Generic Annotation File (GAF) that provides all of our annotations for
+genes, exons, etc can be found at
+https://tcga-data.nci.nih.gov/tcgafiles/ftp_auth/distro_ftpusers/anonymous/other/GAF/GAF_bundle/outputs/TCGA.Sept2010.09202010.gaf
+
+Conventions:
+
+Please note our spljxn.quantification.txt, exon.quantification.txt, and the
+GAF file above use the convention of chr:smaller_int-larger_int:+ for plus
+strand features and chr:larger_int-smaller_int:- for negative strand features.
+Carefully examine future versions of these annotation and quantification files
+since this convension is subject to change.
+
+Column Headers:
+
+These are just brief descriptions of the column headers you will find in the
+various level 3 files. See the DESCRIPTION.txt file in the mage-tab bunlde for
+more detailed methods on how each of these files were created.
+
+File: *.trimmed.annotated.gene.quantification.txt
+
+* gene: This is the Entrez/LocusLink gene symbol followed by the
+  Entrez/LocusLink gene ID.
+* raw_counts: The number of reads mapping to this gene.
+* median_length_normalized: This is the total aligned bases to all transcript
+  models associated with this gene divided by the mean transcript length.
+* RPKM: See the DESCRIPTION.txt file in the mage-tab bunlde for
+  information on how this is calculated.
+
+File: *.trimmed.annotated.exon.quantification.txt
+
+* exon: This is the location of the exon in hg19 (GRCh37) based on the UCSC
+  Gene standard track (December 2009 version).
+* raw_counts: The number of reads mapping to this exon.
+* median_length_normalized: This is the total aligned bases to this exon
+  divided by the exon length.
+* RPKM: See the DESCRIPTION.txt file in the mage-tab bunlde for
+  information on how this is calculated.
+
+File: *.trimmed.annotated.spljxn.quantification.txt
+
+This file does not include normalized counts since splice junctions are a
+fixed size.
+
+* junction: This is the location of the splice junction in hg19 (GRCh37)
+  based on the UCSC Gene standard track (December 2009 version).
+* raw_counts: The number of reads mapping to this splice junction.
+
+File: *.wig
+
+This is a WIG file format that represents coverage, see
+http://genome.ucsc.edu/FAQ/FAQformat.html#format6 for
+more information.
+
+#########################
+
+V2_MapSpliceRSEM: UNC V2 RNA-Seq Workflow - MapSplice genome alignment and RSEM estimation of GAF 2.1
+
+Date: 05-10-2012
+
+Contacts:
+
+* Lisle Mose <lmose@email.unc.edu>
+* Joel Parker <parkerjs@email.unc.edu>
+
+Versions:
+
+This analysis was carried out using the SeqWare Pipeline project, version
+0.7.0. The workflow was "MapspliceRSEM" version 0.7.x. UNC
+provides all our analysis software through this open source project. 
+
+Annotations:
+
+The Generic Annotation File (GAF) that provides all of our annotations for
+genes, exons, etc can be found at
+https://tcga-data.nci.nih.gov/docs/GAF/GAF.hg19.June2011.bundle/outputs/TCGA.hg19.June2011.gaf
+
+Conventions:
+
+Please note our junction_quantification.txt, exon_quantification.txt, and the
+GAF file above use the convention of chr:smaller_int-larger_int:+ for plus
+strand features and chr:larger_int-smaller_int:- for negative strand features.
+Carefully examine future versions of these annotation and quantification files
+since this convension is subject to change.
+
+Column Headers:
+
+RSEM abundance estimation results in two files, gene and isoform level quantification. More
+information regarding the content of these output files can be found on the RSEM website
+(http://deweylab.biostat.wisc.edu/rsem/rsem-calculate-expression.html#output).  In short,
+the format indicates the feature name in column 1, esimated count in colum 2, scaled
+estimate in column 3, and contributing isoforms in column 4 (gene level only). These files
+will have the following extensions:
+
+rsem.genes.results
+rsem.isoforms.results
+
+RSEM expression estimates are normalized to set the upper quartile count at 1000 for gene level
+and 300 for isoform level estimates.  These files have two columns, feature name and normalized
+count, and correspond to the following extensions:
+ 
+rsem.genes.normalized_results
+rsem.isoforms.normalized_results
+
+Exon and junction level quantification are provided in a similar format as described for V1, although
+the Mapsplice genome alignments are used for overlap counting in V2.  The exon counts are formatted as
+exon location in column 1(hg19 based on the UCSC Gene standard track, December 2009 version), number of
+reads in column 2, fraction of bases covered in column 3, and RPKM (calculated as described for V1) in 
+column 4. The exon count files have the extension:
+
+bt.exon_quantification.txt
+
+The file format for junction counts is identical to V1 and has the extension:
+
+junction_quantification.txt
+
