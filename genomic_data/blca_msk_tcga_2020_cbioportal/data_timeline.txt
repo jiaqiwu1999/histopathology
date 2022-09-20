@@ -1,0 +1,70 @@
+PATIENT_ID	START_DATE	STOP_DATE	EVENT_TYPE	TREATMENT_TYPE	SUBTYPE	AGENT	OTHER_SAMPLE_ID	OTHER_PATIENT_ID	CHEMO_CYCLES	COMMENTS	TREATMENT_BEST_RESPONSE	OVERALL_RESPONSE	REASON_FOR_TX_DISCONTINUATION	NOTE	Surgery_DETAILS	SOURCE	SAMPLE_ID	Status	SPECIMEN_TYPE	TREATMENT_DETAILS	SOURCE_LAB	Surgery	EVENT_DETAILS	DOSAGE	KARNOFSKY_PERFORMANCE_SCORE	SPECIMEN_SITE	TYPE_OF_Surgery	DIAGNOSTIC_TYPE	DIAGNOSTIC_TYPE_DETAILED	CONCURRENT_CHEMO	MGMT_Status	EVENT_TYPE_DETAILED	HISTOLOGY	WHO_GRADE	SOURCE_PATHOLOGY
+P-0000068	335		Status															Time of recurrence																	
+P-0003131	505		Status															Time of recurrence																	
+P-0000079	26		Status															Time of recurrence																	
+P-0000290	450		Status															Time of recurrence																	
+P-0000308	26		Status															Time of recurrence																	
+P-0004008	1012		Status															Time of recurrence																	
+P-0000307	564		Status															Time of recurrence																	
+P-0000268	0		Status															Time of recurrence																	
+P-0000423	3		Status															Time of recurrence																	
+P-0000916	456		Status															Time of recurrence																	
+P-0000083	129		Status															Time of recurrence																	
+P-0000877	343		Status															Time of recurrence																	
+P-0002576	1080		Status															Time of recurrence																	
+P-0000908	251		Status															Time of recurrence																	
+P-0001100	821		Status															Time of recurrence																	
+P-0001610	356		Status															Time of recurrence																	
+P-0003373	685		Status															Time of recurrence																	
+P-0004085	538		Status															Time of recurrence																	
+P-0004085	538		Status															Time of recurrence																	
+P-0003698	506		Status															Time of recurrence																	
+P-0003029	345		Status															Time of recurrence																	
+P-0002599	1444		Status															Time of recurrence																	
+P-0000410	426		Status															Time of recurrence																	
+P-0003071	75		Status															Time of recurrence																	
+P-0002186	175		Status															Time of recurrence																	
+P-0003140	307		Status															Time of recurrence																	
+P-0002991	117		Status															Time of recurrence																	
+P-0002824	208		Status															Time of recurrence																	
+P-0004137	261		Status															Time of recurrence																	
+P-0003279	229		Status															Time of recurrence																	
+P-0003809	1177		Status															Time of recurrence																	
+P-0004953	191		Status															Time of recurrence																	
+P-0004176	270		Status															Time of recurrence																	
+P-0004920	363		Status															Time of recurrence																	
+P-0005076	157		Status															Time of recurrence																	
+P-0003131	0		Surgery												Radical cystectomy																				
+P-0003071	39		Surgery												Radical cystectomy																				
+P-0003029	42		Surgery												Radical cystectomy																				
+P-0000068	55		Surgery												Radical cystectomy																				
+P-0002824	56		Surgery												Radical cystectomy																				
+P-0003698	56		Surgery												Radical cystectomy																				
+P-0004953	60		Surgery												Radical cystectomy																				
+P-0001610	74		Surgery												Radical cystectomy																				
+P-0000877	107		Surgery												Radical cystectomy																				
+P-0003373	116		Surgery												Radical cystectomy																				
+P-0005511	118		Surgery												Radical cystectomy																				
+P-0003140	125		Surgery												Radical cystectomy																				
+P-0005076	144		Surgery												Radical cystectomy																				
+P-0000908	148		Surgery												Radical cystectomy																				
+P-0002186	151		Surgery												Radical cystectomy																				
+P-0000916	153		Surgery												Radical cystectomy																				
+P-0000290	154		Surgery												Radical cystectomy																				
+P-0004085	169		Surgery												Radical cystectomy																				
+P-0004085	169		Surgery												Radical cystectomy																				
+P-0003279	182		Surgery												Radical cystectomy																				
+P-0000307	211		Surgery												Radical cystectomy																				
+P-0004008	221		Surgery												Radical cystectomy																				
+P-0005449	394		Surgery												Radical cystectomy																				
+P-0002586	459		Surgery												Radical cystectomy																				
+P-0002576	627		Surgery												Radical cystectomy																				
+P-0001100	639		Surgery												Radical cystectomy																				
+P-0002599	912		Surgery												Radical cystectomy																				
+P-0007312	28		Surgery												Date of Procedure which was sent for IMPACT																				
+P-0006129	136		Surgery												Date of Procedure which was sent for IMPACT																				
+P-0007682	1166		Surgery												Date of Procedure which was sent for IMPACT																				
+P-0007805	0		Surgery												Date of Procedure which was sent for IMPACT																				
+P-0007656	0		Surgery												Date of Procedure which was sent for IMPACT																				
+P-0007658	0		Surgery												Date of Procedure which was sent for IMPACT																				
+P-0007661	465		Surgery												Date of Procedure which was sent for IMPACT																				
