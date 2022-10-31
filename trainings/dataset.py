@@ -8,11 +8,11 @@ DEFAULT_LABEL_DIR = '../genomic_data/'
 DEFAULT_IMG_DIR = '../tile_data/'
 
 class tileDataset(Dataset):
-    def __init__(self, patient_list, label_dict, data_transform, N, tile_root_directory=DEFAULT_IMG_DIR, gene_name="TP53", multilabel=False):
+    def __init__(self, tile_list, label_dict, data_transform, N, tile_root_directory=DEFAULT_IMG_DIR, gene_name="TP53", multilabel=False):
         super(tileDataset, self).__init__()
         self.label_dict = label_dict # a Path object
         self.root_dir = tile_root_directory
-        self.patients = patient_list
+        self.tile_file = tile_list
         self.transform = data_transform
         self.N = N
         self.gene = gene_name
@@ -41,7 +41,7 @@ class tileDataset(Dataset):
             
         
 class tileFeatureDataset(Dataset):
-    def __init__(self, feature_files, label_dict, gene_name="TP53", multilabel=False):
+    def __init__(self, feature_files, label_dict, gene_name=["TP53"], multilabel=False):
         super(tileFeatureDataset, self).__init__()
         self.feature_files = feature_files
         self.label_dict = label_dict
@@ -51,9 +51,9 @@ class tileFeatureDataset(Dataset):
         
     def __getitem__(self, idx):
         f = self.feature_files[idx]
-        feature = np.load(f)
+        feature = np.load(f, allow_pickle=True)
         patient = f.split('/')[-1].split('.')[0]
-        label = float(self.label_dict[patient][self.gene])
+        label = float(self.label_dict[patient][self.gene[0]])
         return torch.from_numpy(feature), torch.tensor(label)
         
     def __len__(self):
