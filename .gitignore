@@ -8,3 +8,5 @@
 tutorials/
 src/
 .viminfo
+*/.ipynb_checkpoints/*
+tile_data/*
